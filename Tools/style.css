@@ -12,12 +12,12 @@ body {
     cursor: default;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     background-color: #EEEEEE;
     width: 8px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: #393E46;
     border: 1px solid #222831;
     border-radius: 2px;
@@ -25,29 +25,35 @@ body {
 
 header {
     width: 100%;
-    padding: 0rem 1rem;
+    padding: .4rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #222831;
-    color: inherit;
 }
 
-.logo a{
-    list-style-type: none;
+header .logo a {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     text-decoration: none;
 }
 
-.logo a:hover{
-    color: #EEEEEE;
+header .logo img {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
 }
 
-header h2 {
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: #EEEEEE;
+header .logo h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #cecece;
+    margin: 0;
 }
 
+/* 
 header ul {
     display: flex;
     align-items: center;
@@ -60,7 +66,7 @@ header ul {
 ul a{
     text-decoration: none;
     color: #EEEEEE;
-}
+} */
 
 
 footer {
@@ -75,6 +81,29 @@ footer {
     font-size: 1rem;
 }
 
-footer p{
+footer p {
     margin: 0;
+}
+
+@media (min-width: 1500px) {
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+    }
+
+    header .logo img {
+        width: 140px;
+        height: 80px;
+    }
+
+    header .logo h2 {
+        font-size: 3.1rem;
+    }
+
+    footer {
+        font-size: 1.6rem;
+    }
 }

@@ -32,10 +32,27 @@ header {
     background-color: #222831;
 }
 
-header h2 {
-    font-size: 2rem;
+header .logo {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
+header .logo img {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+}
+
+header .logo h2 {
+    font-size: 2.3rem;
+    font-weight: 100;
+    letter-spacing: 4px;
+    color: #cecece;
+}
+
+/* 
 header ul {
     display: flex;
     align-items: center;
@@ -48,7 +65,7 @@ header ul {
 ul li {
     text-decoration: none;
     color: #EEEEEE;
-}
+} */
 
 a {
     text-decoration: none;
@@ -104,6 +121,11 @@ main .tool-info {
     gap: .3rem;
 }
 
+.tool-info p {
+    text-wrap: wrap;
+    text-align: center;
+}
+
 footer {
     width: 100%;
     position: fixed;
@@ -113,4 +135,51 @@ footer {
     justify-content: center;
     background-color: #222831;
     font-size: 1rem;
+}
+
+
+@media (min-width: 1500px) {
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+    }
+
+    header .logo img {
+        width: 140px;
+        height: 80px;
+    }
+
+    header .logo h2 {
+        font-size: 3rem;
+    }
+    
+    main .box {
+        min-width: 26rem;
+    }
+
+    .box .tool-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    main .tool-info {
+        padding: .6rem;
+        gap: .3rem;
+    }
+
+    .tool-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .tool-info p {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 1.6rem;
+    }
+
 }
